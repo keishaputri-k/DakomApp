@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="txt_iv">ImageView</string>
+    <string name="txt_log_in">Log In</string>
+    <string name="txt_sign_up">Sign Up</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_input_email">Please enter your email..</string>
+    <string name="txt_name">Name</string>
+    <string name="txt_input_name">Please enter your name...</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_input_password">Please enter your password...</string>
+    <string name="txt_confirm_password">Confirm Password</string>
+    <string name="txt_input_confirm_password">Please confirm your password...</string>
+    <string name="txt_register">Register</string>
+    <string name="txt_forgot_password">Forgot Password?</string>
+    <string name="txt_hello_sarah">Hello, Sarah!</string>
+    <string name="txt_title">Title</string>
+    <string name="txt_location">Location</string>
+    <string name="txt_date">Date</string>
+    <string name="txt_let_s_spread_the_light">Let\'s spread the Light</string>
+    <string name="txt_popular">Popular</string>
+    <string name="txt_near_by">Near By</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_detail">Detail</string>
+    <string name="txt_lectures">Lectures</string>
+    <string name="txt_error">Not Empty</string>
+    <string name="txt_pass_mismatch">Password Miss match</string>
+    <string name="txt_users">Users</string>
+    <string name="txt_login">Login</string>
+</resources>
