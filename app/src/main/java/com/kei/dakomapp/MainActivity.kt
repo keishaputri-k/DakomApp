@@ -11,7 +11,6 @@ import com.kei.dakomapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(){
     private  lateinit var  mainBinding: ActivityMainBinding
-//    private lateinit var bnvMain: MeowBottomNavigation
 
     companion object {
         fun getLaunchService (from: Context) = Intent(from, MainActivity::class.java).apply {

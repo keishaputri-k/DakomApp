@@ -21,6 +21,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         loginBinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(loginBinding.root)
         firebaseAuth = FirebaseAuth.getInstance()
@@ -29,15 +30,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(p0: View) {
         when(p0.id){
-            R.id.btnLoginLanding -> loginEmailPass()
-        }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        val user = FirebaseAuth.getInstance().currentUser
-        if (user != null){
-            startActivity(MainActivity.getLaunchService(this))
+            R.id.btnLogin -> loginEmailPass()
         }
     }
 

@@ -137,7 +137,7 @@
         android:background="@drawable/ic_background_btn"
         android:hint="@string/txt_input_confirm_password"
         android:textColor="@color/white"
-        android:inputType="textVisiblePassword"
+        android:inputType="textPassword"
         android:padding="@dimen/_15dp"
         android:textColorHint="@color/white_transparent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -158,5 +158,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etConfirmPassRegister"
         app:layout_constraintVertical_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/tvLabelRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_register"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivHeadAuth"
+        app:layout_constraintEnd_toEndOf="@+id/ivHeadAuth"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.316" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
