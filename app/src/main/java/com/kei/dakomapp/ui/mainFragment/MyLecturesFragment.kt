@@ -1,10 +1,11 @@
-package com.kei.dakomapp
+package com.kei.dakomapp.ui.mainFragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.kei.dakomapp.R
 
 class MyLecturesFragment : Fragment() {
 

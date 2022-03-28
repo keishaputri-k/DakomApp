@@ -1,10 +1,13 @@
-package com.kei.dakomapp
+package com.kei.dakomapp.ui.auth
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.kei.dakomapp.R
 import com.kei.dakomapp.databinding.ActivityLandingScreenBinding
+import com.kei.dakomapp.ui.auth.LoginActivity
+import com.kei.dakomapp.ui.auth.RegisterActivity
 
 
 class LandingScreen : AppCompatActivity(), View.OnClickListener{

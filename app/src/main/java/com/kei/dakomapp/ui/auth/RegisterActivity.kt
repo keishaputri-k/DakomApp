@@ -1,4 +1,4 @@
-package com.kei.dakomapp
+package com.kei.dakomapp.ui.auth
 
 import android.app.ProgressDialog
 import android.content.Context
@@ -10,7 +10,9 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.kei.dakomapp.R
 import com.kei.dakomapp.databinding.ActivityRegisterBinding
+import com.kei.dakomapp.ui.MainActivity
 
 class RegisterActivity : AppCompatActivity(), View.OnClickListener{
     private lateinit var mAuth: FirebaseAuth

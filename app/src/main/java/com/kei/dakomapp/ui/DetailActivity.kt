@@ -1,7 +1,8 @@
-package com.kei.dakomapp
+package com.kei.dakomapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.kei.dakomapp.R
 
 class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

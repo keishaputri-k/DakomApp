@@ -1,4 +1,4 @@
-package com.kei.dakomapp
+package com.kei.dakomapp.ui
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
+import com.kei.dakomapp.R
 import com.kei.dakomapp.databinding.ActivityMainBinding
+import com.kei.dakomapp.ui.mainFragment.HomeFragment
+import com.kei.dakomapp.ui.mainFragment.MyLecturesFragment
+import com.kei.dakomapp.ui.mainFragment.ProfileFragment
 
 
 class MainActivity : AppCompatActivity(){
@@ -25,23 +29,18 @@ class MainActivity : AppCompatActivity(){
 
         addFragment(HomeFragment.newInstance())
         mainBinding.bnvMain.show(0)
-        mainBinding.bnvMain.add(MeowBottomNavigation.Model(0,R.drawable.ic_my_lecture))
-        mainBinding.bnvMain.add(MeowBottomNavigation.Model(1,R.drawable.ic_discovery))
-        mainBinding.bnvMain.add(MeowBottomNavigation.Model(2,R.drawable.ic_home))
-        mainBinding.bnvMain.add(MeowBottomNavigation.Model(3,R.drawable.ic_profile))
-
+        mainBinding.bnvMain.add(MeowBottomNavigation.Model(0, R.drawable.ic_home))
+        mainBinding.bnvMain.add(MeowBottomNavigation.Model(1, R.drawable.ic_my_lecture))
+        mainBinding.bnvMain.add(MeowBottomNavigation.Model(2, R.drawable.ic_profile))
         mainBinding.bnvMain.setOnClickMenuListener {
             when(it.id) {
                 0 -> {
-                    replaceFragment(MyLecturesFragment.newInstance())
-                }
-                1 -> {
-                    replaceFragment(HomeFragment.newInstance()) //discovery
-                }
-                2 -> {
                     replaceFragment(HomeFragment.newInstance())
                 }
-                3 -> {
+                1 -> {
+                    replaceFragment(MyLecturesFragment.newInstance()) //discovery
+                }
+                2 -> {
                     replaceFragment(ProfileFragment.newInstance())
                 }
                 else -> {
@@ -53,11 +52,11 @@ class MainActivity : AppCompatActivity(){
 
     private fun replaceFragment(fragment:Fragment){
         val fragmentTransition = supportFragmentManager.beginTransaction()
-        fragmentTransition.replace(R.id.fragmentContainer,fragment).addToBackStack(Fragment::class.java.simpleName).commit()
+        fragmentTransition.replace(R.id.fragmentContainerMain,fragment).addToBackStack(Fragment::class.java.simpleName).commit()
     }
 
     private fun addFragment(fragment:Fragment){
         val fragmentTransition = supportFragmentManager.beginTransaction()
-        fragmentTransition.add(R.id.fragmentContainer,fragment).addToBackStack(Fragment::class.java.simpleName).commit()
+        fragmentTransition.add(R.id.fragmentContainerMain,fragment).addToBackStack(Fragment::class.java.simpleName).commit()
     }
 }

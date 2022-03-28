@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".HomeFragment">
+    tools:context=".ui.mainFragment.HomeFragment">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -12,54 +12,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/ivProfileHome"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/profile"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+            <ImageView
+                android:id="@+id/ivDiscoveryHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:src="@drawable/ic_discovery"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-            </de.hdodenhof.circleimageview.CircleImageView>
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/txt_iv" />
 
-            <TextView
-                android:id="@+id/tvUserHome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_12dp"
-                android:text="@string/txt_hello_sarah"
-                android:textSize="@dimen/_20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.165"
-                app:layout_constraintStart_toEndOf="@+id/ivProfileHome"
-                app:layout_constraintTop_toTopOf="@+id/ivProfileHome" />
+            <ImageView
+                android:id="@+id/ivIconHome"
+                android:layout_width="@dimen/_35dp"
+                android:layout_height="@dimen/_35dp"
+                android:src="@drawable/ic_dr"
+                android:layout_marginTop="@dimen/_16dp"
+                app:layout_constraintEnd_toStartOf="@+id/ivNotificationHome"
+                app:layout_constraintStart_toEndOf="@+id/ivDiscoveryHome"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/txt_iv" />
 
-            <TextView
-                android:id="@+id/tvSubHome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_4dp"
-                android:text="@string/txt_let_s_spread_the_light"
-                android:textColor="@color/main_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/tvUserHome"
-                app:layout_constraintTop_toBottomOf="@+id/tvUserHome" />
 
             <ImageView
                 android:id="@+id/ivNotificationHome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
                 android:layout_marginTop="@dimen/_16dp"
                 android:layout_marginEnd="@dimen/_16dp"
                 android:contentDescription="@string/txt_iv"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/tvUserHome"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_notification" />
 
@@ -67,16 +50,16 @@
                 android:id="@+id/tvPopularHome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_24dp"
                 android:background="@drawable/background_btn"
                 android:gravity="center"
                 android:text="@string/txt_popular"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/ivProfileHome"
-                app:layout_constraintTop_toBottomOf="@+id/ivProfileHome" />
+                app:layout_constraintHorizontal_bias="0.061"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivIconHome" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvPopularHome"

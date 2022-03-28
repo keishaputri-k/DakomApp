@@ -9,5 +9,5 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "appname"
+rootProject.name = "DakomApp"
 include ':app'

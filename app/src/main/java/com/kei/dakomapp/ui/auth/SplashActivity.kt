@@ -1,9 +1,10 @@
-package com.kei.dakomapp
+package com.kei.dakomapp.ui.auth
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.kei.dakomapp.R
 
 class SplashActivity : AppCompatActivity() {
     private val SPLASH_TIME_OUT:Long = 4000
