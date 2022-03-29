@@ -25,10 +25,10 @@
             android:name=".ui.auth.LandingScreen"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.discoveryFragments.DiscoveryActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.discoveryFragments.DiscoveryActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

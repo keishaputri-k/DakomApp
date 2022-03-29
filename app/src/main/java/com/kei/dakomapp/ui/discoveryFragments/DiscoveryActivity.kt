@@ -1,15 +1,24 @@
 package com.kei.dakomapp.ui.discoveryFragments
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.kei.dakomapp.R
+import com.kei.dakomapp.ui.MainActivity
 
 class DiscoveryActivity : AppCompatActivity() {
     private var tabLayout: TabLayout? = null
     private var vpDiscovery: ViewPager2? = null
     private var adapter: DiscoveryAdapter? = null
+
+    companion object {
+        fun getLaunchService (from: Context) = Intent(from, DiscoveryActivity::class.java).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
