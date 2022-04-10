@@ -4,14 +4,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.google.firebase.auth.FirebaseAuth
 import com.kei.dakomapp.R
 import com.kei.dakomapp.databinding.ActivityLandingScreenBinding
+import com.kei.dakomapp.ui.MainActivity
 import com.kei.dakomapp.ui.auth.LoginActivity
 import com.kei.dakomapp.ui.auth.RegisterActivity
 
 
-class LandingScreen : AppCompatActivity(), View.OnClickListener{
-    private lateinit var landingBinding : ActivityLandingScreenBinding
+class LandingScreen : AppCompatActivity(), View.OnClickListener {
+    private lateinit var landingBinding: ActivityLandingScreenBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,9 +26,17 @@ class LandingScreen : AppCompatActivity(), View.OnClickListener{
     }
 
     override fun onClick(p0: View?) {
-        when (p0?.id){
+        when (p0?.id) {
             R.id.btnLoginLanding -> startActivity(Intent(LoginActivity.getLaunchService(this)))
             R.id.btnRegisterLanding -> startActivity(Intent(RegisterActivity.getLaunchService(this)))
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            startActivity(MainActivity.getLaunchService(this))
         }
     }
 }

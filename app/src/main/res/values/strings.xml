@@ -28,4 +28,12 @@
     <string name="txt_pass_mismatch">Password Miss match</string>
     <string name="txt_users">Users</string>
     <string name="txt_login">Login</string>
+    <string name="txt_search_hint">search for letures..</string>
+    <string name="txt_no_notification_yet">No Notification yet</string>
+    <string name="txt_notifications">Notifications</string>
+    <string name="txt_new_post">New Post</string>
+    <string name="txt_caption">Caption</string>
+    <string name="txt_hint_new_post">Write here...</string>
+    <string name="txt_likes">Likes</string>
+    <string name="txt_date_dummy">Sabtu, 15 Januari 2022</string>
 </resources>

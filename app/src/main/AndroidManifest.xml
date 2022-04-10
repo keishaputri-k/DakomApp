@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DakomApp">
         <activity
-            android:name=".ui.auth.SplashActivity"
+            android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
             android:name=".ui.auth.RegisterActivity"
@@ -25,10 +25,13 @@
             android:name=".ui.auth.LandingScreen"
             android:exported="false" />
         <activity
+            android:name=".ui.NotificationActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.discoveryFragments.DiscoveryActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.auth.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

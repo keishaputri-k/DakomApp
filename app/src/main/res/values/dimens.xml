@@ -27,4 +27,11 @@
     <dimen name="_28sp">28sp</dimen>
     <dimen name="_35dp">35dp</dimen>
     <dimen name="_50dp">50dp</dimen>
+    <dimen name="_70dp">70dp</dimen>
+    <dimen name="_84dp">84dp</dimen>
+    <dimen name="_342dp">342dp</dimen>
+    <dimen name="_163dp">163dp</dimen>
+    <dimen name="_2dp">2dp</dimen>
+    <dimen name="_180dp">180dp</dimen>
+    <dimen name="_200dp">200dp</dimen>
 </resources>

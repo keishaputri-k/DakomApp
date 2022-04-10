@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.mainFragment.HomeFragment">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -18,21 +20,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_16dp"
                 android:layout_marginTop="@dimen/_16dp"
+                android:contentDescription="@string/txt_iv"
                 android:src="@drawable/ic_discovery"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/txt_iv" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/ivIconHome"
                 android:layout_width="@dimen/_35dp"
                 android:layout_height="@dimen/_35dp"
-                android:src="@drawable/ic_dr"
                 android:layout_marginTop="@dimen/_16dp"
+                android:contentDescription="@string/txt_iv"
+                android:src="@drawable/ic_dr"
                 app:layout_constraintEnd_toStartOf="@+id/ivNotificationHome"
                 app:layout_constraintStart_toEndOf="@+id/ivDiscoveryHome"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/txt_iv" />
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <ImageView
@@ -42,6 +44,7 @@
                 android:layout_marginTop="@dimen/_16dp"
                 android:layout_marginEnd="@dimen/_16dp"
                 android:contentDescription="@string/txt_iv"
+                app:layout_constraintBottom_toBottomOf="@+id/ivIconHome"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_notification" />

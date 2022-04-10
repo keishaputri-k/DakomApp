@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_screen_color"
     tools:context=".ui.discoveryFragments.DiscoveryActivity">
 
     <com.google.android.material.tabs.TabLayout
@@ -14,10 +15,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tabGravity="fill"
+        android:clickable="true"
+        android:contextClickable="true"
         app:tabIndicator="@drawable/tab_indicator"
         app:tabIndicatorAnimationMode="elastic"
         app:tabIndicatorGravity="stretch"
         app:tabMode="fixed"
+        android:background="@color/background_screen_color"
         app:tabSelectedTextColor="@color/white"
         app:tabTextColor="@color/dark_grey" />
 
@@ -25,9 +29,10 @@
         android:id="@+id/vpDiscovery"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabLayoutDiscovery" />
+        app:layout_constraintTop_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#F8F8F8"
+tools:context=".ui.discoveryFragments.EventsFragment">
 <FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flActivities"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.discoveryFragments.EventsFragment">
-
-
-
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clActivities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_20dp">
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/svEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="@dimen/_2dp"
+            android:clickable="true"
+            app:searchIcon="@drawable/ic_fe_search"
+            app:queryHint="@string/txt_search_hint"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@drawable/ic_rectangle_search">
+        </androidx.appcompat.widget.SearchView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/svEvents"
+            app:layout_constraintVertical_bias="0.0"
+            tools:listitem="@layout/lecture_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
+</ScrollView>

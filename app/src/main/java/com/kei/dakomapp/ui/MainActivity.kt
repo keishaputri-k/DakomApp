@@ -5,13 +5,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import android.os.Bundle;
-import android.view.View
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import com.kei.dakomapp.R
 import com.kei.dakomapp.databinding.ActivityMainBinding
-import com.kei.dakomapp.ui.auth.LoginActivity
-import com.kei.dakomapp.ui.auth.RegisterActivity
-import com.kei.dakomapp.ui.discoveryFragments.DiscoveryActivity
 import com.kei.dakomapp.ui.mainFragment.HomeFragment
 import com.kei.dakomapp.ui.mainFragment.MyLecturesFragment
 import com.kei.dakomapp.ui.mainFragment.ProfileFragment

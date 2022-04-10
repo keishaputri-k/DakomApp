@@ -7,7 +7,7 @@ import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.kei.dakomapp.R
-import com.kei.dakomapp.ui.MainActivity
+import com.kei.dakomapp.adapter.DiscoveryAdapter
 
 class DiscoveryActivity : AppCompatActivity() {
     private var tabLayout: TabLayout? = null
@@ -46,4 +46,5 @@ class DiscoveryActivity : AppCompatActivity() {
             }
         })
     }
+
 }
