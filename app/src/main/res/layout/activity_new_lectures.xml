@@ -326,19 +326,34 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_92dp"
+            android:layout_height="wrap_content"
             android:src="@drawable/background_bottom_button"
+            android:layout_marginTop="@dimen/_20dp"
+            app:cardElevation="@dimen/_40dp"
+            app:layout_constraintTop_toBottomOf="@id/etDescriptionNewLecture"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            >
+            app:layout_constraintEnd_toEndOf="parent">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_20dp"
                 android:background="@color/white"
-                android:orientation="vertical"
-                >
+                android:layout_margin="@dimen/_20dp"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="@dimen/_110dp"
+                    android:layout_height="@dimen/_40dp"
+                    android:padding="@dimen/_5dp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:text="@string/txt_join_group"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40dp"
+                    android:padding="@dimen/_5dp"
+                    android:text="@string/txt_join_group"
+                    android:backgroundTint="@color/secondary_color"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginEnd="@dimen/_20dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,11 +32,11 @@ class LandingScreen : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-        val user = FirebaseAuth.getInstance().currentUser
-        if (user != null) {
-            startActivity(MainActivity.getLaunchService(this))
-        }
-    }
+//    override fun onStart() {
+//        super.onStart()
+//        val user = FirebaseAuth.getInstance().currentUser
+//        if (user != null) {
+//            startActivity(MainActivity.getLaunchService(this))
+//        }
+//    }
 }

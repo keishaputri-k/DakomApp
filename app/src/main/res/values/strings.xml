@@ -32,8 +32,22 @@
     <string name="txt_no_notification_yet">No Notification yet</string>
     <string name="txt_notifications">Notifications</string>
     <string name="txt_new_post">New Post</string>
-    <string name="txt_caption">Caption</string>
+    <string name="txt_caption">Write your caption</string>
     <string name="txt_hint_new_post">Write here...</string>
     <string name="txt_likes">Likes</string>
     <string name="txt_date_dummy">Sabtu, 15 Januari 2022</string>
+    <string name="txt_profile">Profile</string>
+    <string name="txt_user">User\'s Name</string>
+    <string name="txt_my_lectures">My lectures</string>
+    <string name="txt_new_lectures">New Lecture</string>
+    <string name="txt_fill_title">fill in your title..</string>
+    <string name="txt_lecturer">Lecturer</string>
+    <string name="txt_type">Type</string>
+    <string name="txt_form_link">Form link</string>
+    <string name="txt_group_link">Group Link</string>
+    <string name="txt_fill_in_the_box">Fill in the box..</string>
+    <string name="tv_contact_person">Contact Person</string>
+    <string name="txt_address">Address</string>
+    <string name="txt_description">Description</string>
+    <string name="txt_join_group">Join Group</string>
 </resources>

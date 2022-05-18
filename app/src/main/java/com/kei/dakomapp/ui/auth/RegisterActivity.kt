@@ -67,9 +67,8 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener{
                     refUsers.updateChildren(userHashMap).addOnCompleteListener {
                         if (it.isSuccessful){
                             Toast.makeText(this, "Register Success", Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(MainActivity.getLaunchService(this)))
-                            finish()
-                            return@addOnCompleteListener
+                            val intent = Intent(MainActivity.getLaunchService(this))
+                            startActivity(intent)
                         }
                     }
                 }else{
