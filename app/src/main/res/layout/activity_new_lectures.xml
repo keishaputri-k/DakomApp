@@ -221,7 +221,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_20dp"
-            android:text="@string/txt_date"
+            android:text="@string/txt_quota"
             android:textColor="@color/main_color"
             android:textSize="@dimen/_15sp"
             android:textStyle="bold"
@@ -342,18 +342,22 @@
                 android:orientation="horizontal">
                 <Button
                     android:layout_width="@dimen/_110dp"
-                    android:layout_height="@dimen/_40dp"
+                    android:layout_height="wrap_content"
                     android:padding="@dimen/_5dp"
                     android:layout_marginStart="@dimen/_20dp"
-                    android:text="@string/txt_join_group"/>
+                    android:text="@string/txt_discard"
+                    android:textColor="@color/red"
+                    style="?android:attr/buttonBarButtonStyle" />
                 <Button
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_40dp"
-                    android:padding="@dimen/_5dp"
-                    android:text="@string/txt_join_group"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10dp"
+                    android:text="@string/txt_register_now"
                     android:backgroundTint="@color/secondary_color"
                     android:layout_marginStart="@dimen/_20dp"
-                    android:layout_marginEnd="@dimen/_20dp"/>
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:textColor="@color/white"
+                    style="?android:attr/buttonBarButtonStyle" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,4 +50,7 @@
     <string name="txt_address">Address</string>
     <string name="txt_description">Description</string>
     <string name="txt_join_group">Join Group</string>
+    <string name="txt_register_now">Register Now</string>
+    <string name="txt_quota">Quota</string>
+    <string name="txt_discard">Discard</string>
 </resources>
