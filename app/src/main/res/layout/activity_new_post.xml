@@ -80,7 +80,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCaptionLabelNewPost"
         app:layout_constraintVertical_bias="0.0"
-
         />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/background_bottom_button"
+        android:layout_marginTop="@dimen/_20dp"
+        app:cardElevation="@dimen/_40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="@dimen/_20dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="@dimen/_110dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:text="@string/txt_discard"
+                android:textColor="@color/red"
+                style="?android:attr/buttonBarButtonStyle" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10dp"
+                android:text="@string/txt_post_now"
+                android:backgroundTint="@color/secondary_color"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -352,7 +352,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_10dp"
-                    android:text="@string/txt_register_now"
+                    android:text="@string/txt_post_now"
                     android:backgroundTint="@color/secondary_color"
                     android:layout_marginStart="@dimen/_20dp"
                     android:layout_marginEnd="@dimen/_20dp"
