@@ -28,5 +28,6 @@
         app:mbn_defaultIconColor="#3A5C61"
         app:mbn_rippleColor="#2f424242"
         app:mbn_selectedIconColor="#D6BF80"
-        app:mbn_shadowColor="#1f212121" />
+        app:mbn_shadowColor="#1f212121"
+        tools:ignore="MissingClass" />
 </androidx.constraintlayout.widget.ConstraintLayout>
