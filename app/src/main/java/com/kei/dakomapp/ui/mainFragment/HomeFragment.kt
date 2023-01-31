@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.kei.dakomapp.R
-import com.kei.dakomapp.ui.NotificationActivity
 import com.kei.dakomapp.ui.discoveryFragments.DiscoveryActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -24,7 +23,6 @@ class HomeFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         ivDiscoveryHome.setOnClickListener(this)
-        ivNotificationHome.setOnClickListener(this)
     }
 
     companion object {
@@ -37,14 +35,8 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(p0: View) {
         when (p0.id) {
-            R.id.ivNotificationHome -> moveNotification()
             R.id.ivDiscoveryHome -> moveDiscovery()
         }
-    }
-
-    private fun moveNotification() {
-        val intent = Intent(activity, NotificationActivity::class.java)
-        activity?.startActivity(intent)
     }
 
     private fun moveDiscovery() {

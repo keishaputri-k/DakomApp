@@ -32,22 +32,10 @@
                 android:layout_marginTop="@dimen/_16dp"
                 android:contentDescription="@string/txt_iv"
                 android:src="@drawable/ic_dr"
-                app:layout_constraintEnd_toStartOf="@+id/ivNotificationHome"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivDiscoveryHome"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
-            <ImageView
-                android:id="@+id/ivNotificationHome"
-                android:layout_width="@dimen/_24dp"
-                android:layout_height="@dimen/_24dp"
-                android:layout_marginTop="@dimen/_16dp"
-                android:layout_marginEnd="@dimen/_16dp"
-                android:contentDescription="@string/txt_iv"
-                app:layout_constraintBottom_toBottomOf="@+id/ivIconHome"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_notification" />
 
             <TextView
                 android:id="@+id/tvPopularHome"
@@ -69,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/_10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvPopularHome"
@@ -96,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/_10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvNearHome"

@@ -39,11 +39,11 @@
 
             <ImageView
                 android:id="@+id/ivUserPictureProfile"
-                android:layout_width="141dp"
-                android:layout_height="118dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="40dp"
+                android:layout_width="@dimen/_200dp"
+                android:layout_height="@dimen/_200dp"
+                android:layout_marginTop="@dimen/_60dp"
                 android:src="@drawable/profile"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvLabelProfile" />
 
@@ -51,48 +51,28 @@
                 android:id="@+id/tvUserNameProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="28dp"
                 android:text="@string/txt_user"
                 android:textColor="@color/secondary_color"
                 android:textSize="@dimen/_18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/ivUserPictureProfile"
-                app:layout_constraintTop_toTopOf="@+id/ivUserPictureProfile" />
+                android:layout_marginTop="@dimen/_20dp"
+                app:layout_constraintEnd_toEndOf="@+id/ivUserPictureProfile"
+                app:layout_constraintStart_toStartOf="@+id/ivUserPictureProfile"
+                app:layout_constraintTop_toBottomOf="@+id/ivUserPictureProfile" />
 
             <TextView
                 android:id="@+id/tvUserEmailProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/_10dp"
                 android:text="@string/txt_email"
                 android:textColor="@color/main_color"
                 android:textSize="@dimen/_12sp"
                 android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/tvUserNameProfile"
                 app:layout_constraintStart_toStartOf="@+id/tvUserNameProfile"
                 app:layout_constraintTop_toBottomOf="@+id/tvUserNameProfile" />
 
-            <TextView
-                android:id="@+id/tvMyLecturesLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="39dp"
-                android:text="@string/txt_my_lectures"
-                android:textColor="@color/secondary_color"
-                android:textSize="@dimen/_18sp"
-                app:layout_constraintStart_toStartOf="@+id/ivUserPictureProfile"
-                app:layout_constraintTop_toBottomOf="@+id/ivUserPictureProfile" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvProfile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvMyLecturesLabel"
-                tools:listitem="@layout/lecture_item" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </FrameLayout>

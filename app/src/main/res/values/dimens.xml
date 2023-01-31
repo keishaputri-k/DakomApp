@@ -40,4 +40,5 @@
     <dimen name="_92dp">92dp</dimen>
     <dimen name="_110dp">110dp</dimen>
     <dimen name="_10sp">10sp</dimen>
+    <dimen name="_60dp">60dp</dimen>
 </resources>
