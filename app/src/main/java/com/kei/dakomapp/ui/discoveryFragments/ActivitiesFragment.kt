@@ -23,7 +23,5 @@ class ActivitiesFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_activities, container, false)
     }
 
-    companion object {
-
-    }
+    companion object
 }

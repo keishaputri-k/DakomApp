@@ -25,6 +25,5 @@ class EventsFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_events, container, false)
     }
 
-    companion object {
-    }
+    companion object
 }
