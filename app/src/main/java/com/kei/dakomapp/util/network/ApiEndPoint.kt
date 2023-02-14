@@ -6,9 +6,9 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiEndPoint {
-    @GET("data")
+    @GET("lecture/get")
     fun getData(): Call<ResponseLectures>
 
-    @GET("search")
+    @GET("lecture/search/name/{search}")
     fun searchItem(@Query("search") data: String?): Call<ResponseLectures?>?
 }

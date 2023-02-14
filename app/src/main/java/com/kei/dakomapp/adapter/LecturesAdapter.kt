@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import com.kei.dakomapp.R
+import org.jetbrains.anko.intentFor
 import com.kei.dakomapp.model.LectureItem
 import com.kei.dakomapp.ui.DetailActivity
 import kotlinx.android.synthetic.main.activity_detail.view.*
@@ -29,26 +30,31 @@ class LecturesAdapter(var context: Context) : RecyclerView.Adapter<LecturesAdapt
         fun bind(data: LectureItem) {
             with(itemView) {
 
-                val urlImg: String =
-                    "https://dakom.kerjainaja.id/image/" + data.posterPhotoPath
-
-                Log.d("Cek DataDi Detail", urlImg)
-                Glide.with(itemView)
-                    .load(urlImg)
-                    .centerCrop()
-                    .into(ivPoster)
+//                val urlImg: String =
+//                    "https://dakom.kerjainaja.id/image/" + data.posterPhotoPath
+//
+//                Log.d("Cek DataDi Detail", urlImg)
+//                Glide.with(itemView)
+//                    .load(urlImg)
+//                    .centerCrop()
+//                    .into(ivPoster)
 
                 tvTitleLectureCard.text = data.name
                 tvLecturerNameCard.text = data.lecturer
-                tvLocationCard.text = data.location
+                tvLocationCard.text = data.city
                 tvDateCard.text = data.date
 
                 itemView.setOnClickListener {
-                    Log.d("Cek DataDi adapter", Gson().toJson(data))
-
-                    val page = Intent(context, DetailActivity::class.java)
-                    page.putExtra(DetailActivity.Lectures, Gson().toJson(data))
-                    context.startActivity(page)
+//                    Log.d("Cek Data di adapter", Gson().toJson(data))
+//
+//                    val page = Intent(context, DetailActivity::class.java)
+//                    page.putExtra(DetailActivity.Lectures, Gson().toJson(data))
+//                    context.startActivity(page)
+                    itemView.context.startActivity(
+                        itemView.context.intentFor<DetailActivity>(
+                            "EXTRA_LECTURES" to data
+                        )
+                    )
                 }
             }
         }
@@ -66,5 +72,10 @@ class LecturesAdapter(var context: Context) : RecyclerView.Adapter<LecturesAdapt
 
     }
 
-    override fun getItemCount(): Int = lectures.size
+    override fun getItemCount(): Int {
+        val size: Int = lectures.size
+        // Return at most 5 items from the ArrayList
+        return if (size > 5) 5 else size
+    }
+//    override fun getItemCount(): Int = lectures.size
 }

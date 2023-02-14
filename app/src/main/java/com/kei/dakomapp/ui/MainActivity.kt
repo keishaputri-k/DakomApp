@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(){
         setContentView(mainBinding.root)
         supportActionBar?.hide()
 
-        addFragment(HomeFragment.newInstance())
+        addFragment(defaultMainView)
         mainBinding.bnvMain.show(0)
         mainBinding.bnvMain.add(MeowBottomNavigation.Model(0, R.drawable.ic_home))
         mainBinding.bnvMain.add(MeowBottomNavigation.Model(1, R.drawable.ic_my_lecture))
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity(){
             }
         }
     }
-
+    val defaultMainView = HomeFragment.homeFragment()
     private fun replaceFragment(fragment:Fragment){
         val fragmentTransition = supportFragmentManager.beginTransaction()
         fragmentTransition.replace(R.id.fragmentContainerMain,fragment).addToBackStack(Fragment::class.java.simpleName).commit()

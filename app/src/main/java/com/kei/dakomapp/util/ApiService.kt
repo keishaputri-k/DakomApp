@@ -2,15 +2,16 @@ package com.kei.dakomapp.util
 
 import com.google.gson.GsonBuilder
 import com.kei.dakomapp.room.FavDao
+import com.kei.dakomapp.util.network.ApiEndPoint
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ApiService{
+class ApiService {
     companion object{
-        const val BASE_URL = "https://dakom.smkidnakhwat.com/api"
+        const val BASE_URL = "https://dakom.smkidnakhwat.com/api/"
         private var launchRepository: ApiService? = null
 
-        val endpoint: ApiService
+        val endpoint: ApiEndPoint
             get() {
                 val retrofit = Retrofit.Builder()
                     .baseUrl(BASE_URL)
@@ -20,7 +21,7 @@ class ApiService{
                         )
                     )
                     .build()
-                return retrofit.create(ApiService::class.java)
+                return retrofit.create(ApiEndPoint::class.java)
             }
     }
 }
