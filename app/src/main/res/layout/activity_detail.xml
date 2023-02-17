@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.DetailActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ScrollViewCount">
     <ImageView
         android:id="@+id/ivPoster"
         android:layout_width="wrap_content"
@@ -47,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTitleDetail" />
 
     <TextView
-        android:id="@+id/TvQuotaDetail"
+        android:id="@+id/tvQuotaDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -89,12 +93,12 @@
         android:id="@+id/tvDateLabelDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
         android:text="@string/txt_date"
+        android:layout_marginTop="@dimen/_7dp"
         android:textColor="@color/secondary_color"
         android:textSize="@dimen/_10sp"
         app:layout_constraintStart_toStartOf="@+id/tvLocationLabelDetail"
-        app:layout_constraintTop_toBottomOf="@+id/tvLocationLabelDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvLocationDetail" />
 
     <TextView
         android:id="@+id/tvTimeLabelDetail"
@@ -142,6 +146,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_30dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="@dimen/_70dp"
         android:maxHeight="@dimen/_50dp"
         android:text="@string/txt_description"
         android:textSize="@dimen/_12sp"
@@ -182,26 +187,31 @@
 
     <TextView
         android:id="@+id/tvLocationDetail"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_300dp"
+        android:maxWidth="@dimen/_300dp"
         android:layout_height="wrap_content"
         android:text="@string/txt_dump_address"
         android:textSize="@dimen/_10sp"
+        android:layout_marginStart="@dimen/_3dp"
+        android:layout_marginEnd="@dimen/_15dp"
         app:layout_constraintBottom_toBottomOf="@+id/tvLocationLabelDetail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toEndOf="@+id/tvLocationLabelDetail"
-        app:layout_constraintTop_toTopOf="@+id/tvLocationLabelDetail" />
+        app:layout_constraintTop_toTopOf="@+id/tvLocationLabelDetail"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvDateDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/_7dp"
         android:text="@string/txt_saturday_15_januari_2022"
         android:textSize="@dimen/_10sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvDateLabelDetail"
         app:layout_constraintStart_toEndOf="@+id/tvDateLabelDetail"
-        app:layout_constraintTop_toTopOf="@+id/tvDateLabelDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvLocationDetail" />
 
     <TextView
         android:id="@+id/tvTimeDetail"
@@ -224,10 +234,12 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvCpLabelDetail"
         app:layout_constraintStart_toEndOf="@+id/tvCpLabelDetail"
         app:layout_constraintTop_toTopOf="@+id/tvCpLabelDetail" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cvBottomDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:foregroundGravity="bottom"
         android:src="@drawable/background_bottom_button"
         android:layout_marginTop="@dimen/_20dp"
         app:cardElevation="@dimen/_40dp"
@@ -240,13 +252,16 @@
             android:background="@color/white"
             android:layout_margin="@dimen/_20dp"
             android:orientation="horizontal">
-            <Button
-                android:id="@+id/btnJoinGroupDetail"
-                android:layout_width="@dimen/_110dp"
+            <ImageButton
+                android:id="@+id/btnSaveDetail"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_5dp"
-                android:layout_marginStart="@dimen/_20dp"
-                android:text="@string/txt_join_group" />
+                android:src="@drawable/ic_save_active"
+                android:padding="@dimen/_10dp"
+                android:foregroundGravity="center_vertical"
+                android:background="@color/white_transparent"
+                android:contentDescription="@string/txt_iv"/>
+
             <Button
                 android:id="@+id/btnRegisterNowDetail"
                 android:layout_width="match_parent"
@@ -260,4 +275,5 @@
                 style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

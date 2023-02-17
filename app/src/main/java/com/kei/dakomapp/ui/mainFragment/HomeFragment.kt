@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.kei.dakomapp.R
 import com.kei.dakomapp.adapter.LecturesAdapter
+import com.kei.dakomapp.model.LectureItem
 import com.kei.dakomapp.model.ResponseLectures
 import com.kei.dakomapp.ui.discoveryFragments.DiscoveryActivity
 import com.kei.dakomapp.util.ApiService
@@ -39,12 +40,10 @@ class HomeFragment : Fragment(), View.OnClickListener {
         }
 
         @JvmStatic
-        fun newInstance() =
-            HomeFragment().apply {
+        fun newInstance() = HomeFragment().apply {
                 arguments = Bundle().apply {}
-            }
+        }
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?

@@ -1,24 +1,25 @@
 package com.kei.dakomapp.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.google.gson.Gson
+
 import com.kei.dakomapp.R
 import org.jetbrains.anko.intentFor
 import com.kei.dakomapp.model.LectureItem
 import com.kei.dakomapp.ui.DetailActivity
+import com.kei.dakomapp.ui.DetailActivity.Companion.EXTRA_LECTURE
 import kotlinx.android.synthetic.main.activity_detail.view.*
 import kotlinx.android.synthetic.main.lecture_item.view.*
 
 class LecturesAdapter(var context: Context) : RecyclerView.Adapter<LecturesAdapter.ViewHolder>() {
 
     private var lectures: List<LectureItem> = ArrayList()
+
 
     fun setData(items: List<LectureItem>) {
         lectures = items
@@ -52,7 +53,7 @@ class LecturesAdapter(var context: Context) : RecyclerView.Adapter<LecturesAdapt
 //                    context.startActivity(page)
                     itemView.context.startActivity(
                         itemView.context.intentFor<DetailActivity>(
-                            "EXTRA_LECTURES" to data
+                            EXTRA_LECTURE to data
                         )
                     )
                 }
