@@ -7,9 +7,14 @@ import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import com.kei.dakomapp.R
 import com.kei.dakomapp.model.LectureItem
+import com.kei.dakomapp.room.viewModel.FavoriteViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_detail.*
 
+@AndroidEntryPoint
 class DetailActivity : AppCompatActivity() {
+    private lateinit var favoriteViewModel: FavoriteViewModel
+
     companion object{
         const val EXTRA_LECTURE = "extra_lectures"
     }
@@ -35,6 +40,10 @@ class DetailActivity : AppCompatActivity() {
         tvCpDetail.text = data?.cp.toString()
         tvDescDetail.text = data?.description.toString()
         tvQuotaDetail.text = data?.quota.toString()
+
+        btnSaveDetail.setOnClickListener{
+            data?.let { it1 -> favoriteViewModel.insertFavoriteData(it1) }
+        }
 
     }
 

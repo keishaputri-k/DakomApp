@@ -11,8 +11,10 @@ import com.google.firebase.auth.FirebaseUser
 import com.kei.dakomapp.R
 import com.kei.dakomapp.ui.auth.LandingScreen
 import com.kei.dakomapp.ui.auth.LoginActivity
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_profile.*
 
+@AndroidEntryPoint
 class ProfileFragment : Fragment(), View.OnClickListener{
     var firebaseUser : FirebaseUser? = null
 

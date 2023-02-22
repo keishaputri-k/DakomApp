@@ -1,9 +1,13 @@
 package com.kei.dakomapp.model
 
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
+
+@Entity
 @Parcelize
 data class LectureItem(
 
@@ -52,6 +56,7 @@ data class LectureItem(
     @SerializedName("location")
     val location: String,
 
+    @PrimaryKey
     @SerializedName("id")
     val id: Int,
 

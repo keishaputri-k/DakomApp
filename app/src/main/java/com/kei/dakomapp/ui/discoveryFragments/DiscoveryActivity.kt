@@ -8,7 +8,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.kei.dakomapp.R
 import com.kei.dakomapp.adapter.DiscoveryAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DiscoveryActivity : AppCompatActivity() {
     private var tabLayout: TabLayout? = null
     private var vpDiscovery: ViewPager2? = null

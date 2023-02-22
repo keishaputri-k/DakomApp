@@ -9,6 +9,9 @@ interface ApiEndPoint {
     @GET("lecture/get")
     fun getData(): Call<ResponseLectures>
 
+    @GET("lecture/get")
+    fun getDataFav(): ResponseLectures
+
     @GET("lecture/search/name/{search}")
     fun searchItem(@Query("search") data: String?): Call<ResponseLectures?>?
 }

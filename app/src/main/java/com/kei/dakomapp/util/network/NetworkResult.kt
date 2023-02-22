@@ -1,10 +1,6 @@
 package com.kei.dakomapp.util.network
 
-sealed class NetworkResult<T>(
-    val data: T? = null,
-    val message: String? = null
-){
-    class Success<T>(data: T): NetworkResult<T>(data)
-    class Error<T>(message: String?, data: T? = null): NetworkResult<T>(data, message)
-    class Loading<T>: NetworkResult<T>()
+open class NetworkResult<out R> {
+    data class Success<out T>(val data: T) : NetworkResult<T>()
+    data class Error(val throwable: Throwable) : NetworkResult<Nothing>()
 }

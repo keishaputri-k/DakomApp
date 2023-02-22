@@ -1,7 +1,6 @@
 package com.kei.dakomapp.util
 
 import com.google.gson.GsonBuilder
-import com.kei.dakomapp.room.FavDao
 import com.kei.dakomapp.util.network.ApiEndPoint
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

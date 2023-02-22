@@ -13,7 +13,9 @@ import com.google.firebase.database.FirebaseDatabase
 import com.kei.dakomapp.R
 import com.kei.dakomapp.databinding.ActivityRegisterBinding
 import com.kei.dakomapp.ui.MainActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RegisterActivity : AppCompatActivity(), View.OnClickListener{
     private lateinit var mAuth: FirebaseAuth
     private lateinit var refUsers: DatabaseReference

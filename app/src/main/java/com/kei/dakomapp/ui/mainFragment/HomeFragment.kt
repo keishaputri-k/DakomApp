@@ -1,12 +1,11 @@
 package com.kei.dakomapp.ui.mainFragment
 
-import android.app.ProgressDialog
+import  android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewConfiguration
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,15 +14,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.kei.dakomapp.R
 import com.kei.dakomapp.adapter.LecturesAdapter
-import com.kei.dakomapp.model.LectureItem
 import com.kei.dakomapp.model.ResponseLectures
 import com.kei.dakomapp.ui.discoveryFragments.DiscoveryActivity
 import com.kei.dakomapp.util.ApiService
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_home.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+@AndroidEntryPoint
 class HomeFragment : Fragment(), View.OnClickListener {
 
     private lateinit var lecturesAdapter: LecturesAdapter
@@ -71,31 +71,31 @@ class HomeFragment : Fragment(), View.OnClickListener {
     private fun getDatas() {
         val loading = ProgressDialog.show(context, "Request Data", "Loading..")
         ApiService.endpoint.getData().enqueue(
-                object : Callback<ResponseLectures> {
-                    override fun onResponse(call: Call<ResponseLectures>, response: Response<ResponseLectures>){
-                        loading.dismiss()
-                        Log.d("DATA", "hide loading")
-                        Log.d("DATA", "RESPONSE: ${response.isSuccessful}")
-                        if (response.isSuccessful) {
-                            val data = response.body()
+            object : Callback<ResponseLectures> {
+                override fun onResponse(call: Call<ResponseLectures>, response: Response<ResponseLectures>){
+                    loading.dismiss()
+                    Log.d("DATA", "hide loading")
+                    Log.d("DATA", "RESPONSE: ${response.isSuccessful}")
+                    if (response.isSuccessful) {
+                        val data = response.body()
 
-                            Log.d("DATA", "success")
-                            if (data?.status == "success") {
-                                Log.d("DATA", 200.toString())
-                                if (!data.lecture.isNullOrEmpty()) {
-                                    Log.d("DATA", "ADA")
-                                    Log.d("DATA", Gson().toJson(data.lecture))
-                                    lecturesAdapter.setData(data.lecture)
-                                }
+                        Log.d("DATA", "success")
+                        if (data?.status == "success") {
+                            Log.d("DATA", 200.toString())
+                            if (!data.lecture.isNullOrEmpty()) {
+                                Log.d("DATA", "ADA")
+                                Log.d("DATA", Gson().toJson(data.lecture))
+                                lecturesAdapter.setData(data.lecture)
                             }
                         }
                     }
-                    override fun onFailure(call: Call<ResponseLectures>, t: Throwable) {
-                        Log.d("Response", "Failed : " + t.localizedMessage)
-                        loading.dismiss()
-                    }
                 }
-                )
+                override fun onFailure(call: Call<ResponseLectures>, t: Throwable) {
+                    Log.d("Response", "Failed : " + t.localizedMessage)
+                    loading.dismiss()
+                }
+            }
+        )
     }
 
     override fun onClick(p0: View) {
@@ -108,6 +108,4 @@ class HomeFragment : Fragment(), View.OnClickListener {
         val intent = Intent(activity, DiscoveryActivity::class.java)
         activity?.startActivity(intent)
     }
-
-
 }

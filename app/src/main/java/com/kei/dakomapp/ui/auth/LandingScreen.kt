@@ -10,8 +10,9 @@ import com.kei.dakomapp.databinding.ActivityLandingScreenBinding
 import com.kei.dakomapp.ui.MainActivity
 import com.kei.dakomapp.ui.auth.LoginActivity
 import com.kei.dakomapp.ui.auth.RegisterActivity
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class LandingScreen : AppCompatActivity(), View.OnClickListener {
     private lateinit var landingBinding: ActivityLandingScreenBinding
 
