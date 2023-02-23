@@ -1,7 +1,6 @@
 package com.kei.dakomapp.room.repository
 
 import com.kei.dakomapp.model.LectureItem
-import com.kei.dakomapp.util.ApiService
 import com.kei.dakomapp.util.network.ApiEndPoint
 import com.kei.dakomapp.util.network.NetworkResult
 import kotlinx.coroutines.Dispatchers
@@ -12,7 +11,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class LectureRepository @Inject constructor(private val apiEndPoint: ApiEndPoint){
+class LectureRepository @Inject constructor(private val apiEndPoint: ApiEndPoint) {
     suspend fun getAllLectures(): Flow<NetworkResult<List<LectureItem?>?>>{
         return flow {
             try {

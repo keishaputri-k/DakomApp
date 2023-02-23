@@ -7,15 +7,18 @@ import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import com.kei.dakomapp.R
 import com.kei.dakomapp.model.LectureItem
+import com.kei.dakomapp.room.repository.FavoriteRepository
 import com.kei.dakomapp.room.viewModel.FavoriteViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_detail.*
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class DetailActivity : AppCompatActivity() {
-    private lateinit var favoriteViewModel: FavoriteViewModel
+    private val favoriteRepository: FavoriteRepository by lazy {
+        return@lazy FavoriteRepository()
+    }
 
-    companion object{
+    companion object {
         const val EXTRA_LECTURE = "extra_lectures"
     }
 
@@ -41,8 +44,8 @@ class DetailActivity : AppCompatActivity() {
         tvDescDetail.text = data?.description.toString()
         tvQuotaDetail.text = data?.quota.toString()
 
-        btnSaveDetail.setOnClickListener{
-            data?.let { it1 -> favoriteViewModel.insertFavoriteData(it1) }
+        btnSaveDetail.setOnClickListener {
+            data?.let { it1 -> favoriteRepository.insertFavoriteData(it1) }
         }
 
     }

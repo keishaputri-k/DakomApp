@@ -13,7 +13,7 @@ import com.kei.dakomapp.databinding.ActivityLoginBinding
 import com.kei.dakomapp.ui.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var firebaseAuth: FirebaseAuth
     private  lateinit var  loginBinding: ActivityLoginBinding

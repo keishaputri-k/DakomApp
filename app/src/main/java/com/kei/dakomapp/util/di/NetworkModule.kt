@@ -2,8 +2,6 @@ package com.kei.dakomapp.util.di
 
 
 import com.google.gson.GsonBuilder
-import com.kei.dakomapp.util.ApiService
-import com.kei.dakomapp.util.ApiService.Companion.BASE_URL
 import com.kei.dakomapp.util.network.ApiEndPoint
 import dagger.Module
 import dagger.Provides
@@ -19,6 +17,8 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
+    const val BASE_URL = "https://dakom.smkidnakhwat.com/api/"
+
     @Provides
     @Singleton
     fun provideHTTPLoggingInterceptor(): HttpLoggingInterceptor {
@@ -27,18 +27,18 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideOKHttp(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient{
+    fun provideOKHttp(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
         return OkHttpClient.Builder().addInterceptor(loggingInterceptor).build()
     }
 
     @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient): ApiService {
+    fun provideRetrofit(okHttpClient: OkHttpClient): ApiEndPoint {
         return Retrofit.Builder().baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create(
-                GsonBuilder().setLenient().create()
-            )).client(okHttpClient).build()
-            .create(ApiService::class.java)
+            .addConverterFactory(GsonConverterFactory.create(GsonBuilder().setLenient().create()))
+            .client(okHttpClient)
+            .build()
+            .create(ApiEndPoint::class.java)
     }
 
 }

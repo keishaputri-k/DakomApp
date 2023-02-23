@@ -7,9 +7,9 @@ import android.os.Handler
 import com.kei.dakomapp.R
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class SplashActivity : AppCompatActivity() {
-    private val SPLASH_TIME_OUT:Long = 4000
+    private val SPLASH_TIME_OUT: Long = 4000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

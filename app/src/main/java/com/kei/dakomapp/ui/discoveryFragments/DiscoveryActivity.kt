@@ -10,7 +10,7 @@ import com.kei.dakomapp.R
 import com.kei.dakomapp.adapter.DiscoveryAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class DiscoveryActivity : AppCompatActivity() {
     private var tabLayout: TabLayout? = null
     private var vpDiscovery: ViewPager2? = null

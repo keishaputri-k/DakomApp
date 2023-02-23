@@ -11,9 +11,10 @@ import com.kei.dakomapp.databinding.ActivityMainBinding
 import com.kei.dakomapp.ui.mainFragment.HomeFragment
 import com.kei.dakomapp.ui.mainFragment.MyLecturesFragment
 import com.kei.dakomapp.ui.mainFragment.ProfileFragment
+import com.kei.dakomapp.util.ContextProvider
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class MainActivity : AppCompatActivity(){
     private  lateinit var  mainBinding: ActivityMainBinding
 

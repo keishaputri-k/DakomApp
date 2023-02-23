@@ -4,6 +4,7 @@ import android.app.Application
 import com.kei.dakomapp.model.LectureItem
 import com.kei.dakomapp.room.local.DatabaseLocal
 import com.kei.dakomapp.room.local.FavoriteDao
+import com.kei.dakomapp.util.ContextProvider
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -13,13 +14,12 @@ import java.util.concurrent.Executors
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Singleton
-class FavoriteRepository @Inject constructor(application: Application) {
+class FavoriteRepository {
     private val favoriteDao: FavoriteDao
     private val executorService: ExecutorService = Executors.newSingleThreadExecutor()
 
     init {
-        val database = DatabaseLocal.databaseFavorite(application)
+        val database = DatabaseLocal.databaseFavorite(ContextProvider.get())
         favoriteDao = database.favDao()
     }
 

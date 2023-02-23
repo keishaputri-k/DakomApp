@@ -23,7 +23,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class HomeFragment : Fragment(), View.OnClickListener {
 
     private lateinit var lecturesAdapter: LecturesAdapter
